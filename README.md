@@ -8,7 +8,24 @@ A Module For Capping FPS and Providing Render Controls in Three.js
 - Seamless integration with existing `three.js` render loops
 - Simple control interface with `start()` and `stop()` methods
 
-## Installation
+
+## Usage
 
 ```js
+
 import { renderLoop } from './renderLoop.js'
+
+//
+
+loadingManager.onLoad = function () { // optional..
+
+
+   // THREE Assets Ready         
+
+   const renderControl = renderLoop(animate, 60)
+
+   renderControl.start()
+   // renderControl.stop()      
+
+
+};
